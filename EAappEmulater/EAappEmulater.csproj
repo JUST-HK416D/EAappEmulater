@@ -4,13 +4,14 @@
         <OutputType>WinExe</OutputType>
         <TargetFramework>net6.0-windows</TargetFramework>
         <UseWPF>true</UseWPF>
-        <Platforms>x64</Platforms>
+        <Platforms>x64;AnyCPU</Platforms>
         <PlatformTarget>x64</PlatformTarget>
         <Nullable>disable</Nullable>
         <ImplicitUsings>disable</ImplicitUsings>
         <StartupObject>EAappEmulater.App</StartupObject>
         <ApplicationIcon>Assets\Icons\Favicon.ico</ApplicationIcon>
         <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+        <Configurations>Debug;Release;AnyCPU</Configurations>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -32,11 +33,25 @@
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
         <DebugType>full</DebugType>
+        <PlatformTarget>x64</PlatformTarget>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
         <DebugType>none</DebugType>
         <DebugSymbols>false</DebugSymbols>
+        <PlatformTarget>x64</PlatformTarget>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
     </PropertyGroup>
 
     <ItemGroup>

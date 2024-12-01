@@ -24,7 +24,7 @@ public static class LoggerHelper
         };
 
         // 默认完整日志
-        config.AddRule(LogLevel.Trace, LogLevel.Fatal, logfile);
+        // config.AddRule(LogLevel.Trace, LogLevel.Fatal, logfile);
         config.AddRule(LogLevel.Trace, LogLevel.Fatal, new NlogViewerTarget());
 
         LogManager.ThrowExceptions = false;

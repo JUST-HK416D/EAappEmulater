@@ -85,6 +85,7 @@ public partial class MainWindow
 
         // 初始化工作
         Ready.Run();
+        StartupParameterStarterApp.Run();
 
         // 检查更新（放到最后执行）
         await CheckUpdate();
@@ -112,6 +113,7 @@ public partial class MainWindow
             return;
         }
 
+        StartupParameterStarterApp.Stop();
         // 清理工作
         Ready.Stop();
 

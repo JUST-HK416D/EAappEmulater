@@ -23,12 +23,13 @@ public static class FileHelper
     /// <summary>
     /// 创建文件
     /// </summary>
-    public static void CreateFile(string dirPath, string fileName)
+    public static string CreateFile(string dirPath, string fileName)
     {
         var path = Path.Combine(dirPath, fileName);
 
         if (!File.Exists(path))
             File.Create(path).Close();
+        return path;
     }
 
     /// <summary>

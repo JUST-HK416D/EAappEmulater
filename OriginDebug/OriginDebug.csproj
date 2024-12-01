@@ -3,11 +3,12 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net6.0-windows</TargetFramework>
-        <Platforms>x64</Platforms>
+        <Platforms>x64;AnyCPU</Platforms>
         <Nullable>disable</Nullable>
         <ImplicitUsings>disable</ImplicitUsings>
         <StartupObject>OriginDebug.Program</StartupObject>
         <ApplicationIcon>Favicon.ico</ApplicationIcon>
+        <Configurations>Debug;Release;AnyCPU</Configurations>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
